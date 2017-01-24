@@ -1,0 +1,22 @@
+{
+  "name": "pdfviewer",
+  "version": "1.0.0",
+  "description": "This project allows you to display pdf as it was done by adobe reader but in a website way.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/http-server/bin/http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Contexte/pdfviewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Contexte/pdfviewer/issues"
+  },
+  "homepage": "https://github.com/Contexte/pdfviewer#readme",
+  "devDependencies": {
+    "http-server": "0.9.0"
+  }
+}
