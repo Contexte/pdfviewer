@@ -16,7 +16,7 @@
 
 'use strict';
 
-// var DEFAULT_URL = './files/contexte-abo.pdf';
+var DEFAULT_URL = './files/demo.pdf';
 
 
 var pdfjsWebLibs = {
@@ -7611,7 +7611,7 @@ var pdfjsWebLibs = {
 
     function configure(PDFJS) {
       PDFJS.imageResourcesPath = './images/';
-      PDFJS.workerSrc = './lib/pdfjs/pdf.worker.js';
+      PDFJS.workerSrc = './scripts/pdf.worker.js';
       PDFJS.cMapUrl = './cmaps/';
       PDFJS.cMapPacked = true;
     }
