@@ -16,8 +16,11 @@
 
 'use strict';
 
-var DEFAULT_URL = './files/demo.pdf';
+if ( STATIC_URL === undefined ) {
+  var STATIC_URL = './'
+}
 
+var DEFAULT_URL = STATIC_URL + 'files/demo.pdf';
 
 var pdfjsWebLibs = {
   pdfjsWebPDFJS: window.pdfjsDistBuildPdf
@@ -7610,9 +7613,9 @@ var pdfjsWebLibs = {
     var DISABLE_AUTO_FETCH_LOADING_BAR_TIMEOUT = 5000;
 
     function configure(PDFJS) {
-      PDFJS.imageResourcesPath = './images/';
-      PDFJS.workerSrc = './scripts/pdf.worker.js';
-      PDFJS.cMapUrl = './cmaps/';
+      PDFJS.imageResourcesPath = STATIC_URL + 'images/';
+      PDFJS.workerSrc = STATIC_URL + 'scripts/pdf.worker.js';
+      PDFJS.cMapUrl = STATIC_URL + 'cmaps/';
       PDFJS.cMapPacked = true;
     }
 
@@ -9752,7 +9755,7 @@ function getViewerConfiguration() {
     },
     printContainer: document.getElementById('printContainer'),
     openFileInputName: 'fileInput',
-    debuggerScriptPath: './debugger.js',
+    debuggerScriptPath: STATIC_URL + 'debugger.js',
   };
 }
 
