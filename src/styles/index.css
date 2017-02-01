@@ -2240,3 +2240,33 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     display: none;
   }
 }
+
+/**
+ * Contexte part
+ */
+.ctx-Logo {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 5rem;
+  opacity: 0.5;
+  background: white;
+  padding: 8px;
+}
+
+  .ctx-Logo.ctx-Logo--disabled {
+    display: none;
+  }
+
+  .ctx-Logo img {
+    display: block;
+  }
+
+@media all and (max-width: 640px) {
+  .ctx-Logo {
+    right: 3rem;
+  }
+
+    .ctx-Logo img {
+      width: 70px;
+    }
+}
