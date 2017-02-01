@@ -9759,10 +9759,26 @@ function getViewerConfiguration() {
   };
 }
 
+/**
+* Contexte part
+*/
+function isEmbedded() {
+  return window.top !== window.self
+}
+
+function hideLogo() {
+  document.querySelector('.ctx-js-Logo').classList.add('ctx-Logo--disabled')
+}
+
 function webViewerLoad() {
   var config = getViewerConfiguration();
   window.PDFViewerApplication = pdfjsWebLibs.pdfjsWebApp.PDFViewerApplication;
   pdfjsWebLibs.pdfjsWebApp.PDFViewerApplication.run(config);
+
+  /**
+   * Contexte part
+   */
+  if( isEmbedded() ) { hideLogo() }
 }
 
 document.addEventListener('DOMContentLoaded', webViewerLoad, true);
