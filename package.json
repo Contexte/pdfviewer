@@ -1,6 +1,6 @@
 {
   "name": "pdfviewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This project allows you to display pdf as it was done by adobe reader but in a website way.",
   "main": "index.js",
   "scripts": {
